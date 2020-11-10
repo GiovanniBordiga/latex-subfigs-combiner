@@ -1,6 +1,6 @@
 # LaTeX Subfigs Combiner
 
-Python script for combining LaTeX figures composed of subfigures.
+Python script for combining LaTeX figures composed of subfigures
 
 ## What
 
