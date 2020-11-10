@@ -4,6 +4,9 @@ version     = "0.1.0"
 description = ""
 authors     = ["Giovanni Bordiga <gio.61192@gmail.com>"]
 
+[tool.poetry.scripts]
+combine-subfigs = "latex_subfigs_combiner.combine_subfigures:main"
+
 [tool.poetry.dependencies]
 python = "^3.6"
 PyPDF2 = "^1.26.0"
