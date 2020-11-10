@@ -9,7 +9,7 @@ from PyPDF2 import PdfFileReader, PdfFileWriter
 # arguments handling and parsing
 parser = argparse.ArgumentParser(
     description="""
-    Combines figures composed of subfigures to single PDF files, i.e. one PDF per composite figure.
+    Combines LaTeX figures composed of subfigures into single PDF files, i.e. one PDF per composite figure.
     This is done by parsing the "text_source" TeX file, extracting the preamble, setting the page style to empty,
     extracting the figure environments that contain subfigures, compiling to a PDF via latexmk, and then crop each figure to a separate PDF file using pdfcrop.
     """
