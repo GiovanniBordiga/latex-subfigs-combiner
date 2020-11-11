@@ -75,7 +75,7 @@ def main():
     # create target directory
     try:
         os.mkdir(targetPath)
-    except OSError as error:
+    except OSError:
         os.system("rm -r " + targetPath + "/*")  # clean up target directory
 
     # extract figures from pages
