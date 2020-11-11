@@ -3,6 +3,7 @@ name        = "latex-subfigs-combiner"
 version     = "0.1.0"
 description = "Python script for combining LaTeX figures composed of subfigures."
 authors     = ["Giovanni Bordiga <gio.61192@gmail.com>"]
+license     = "MIT"
 
 [tool.poetry.scripts]
 combine-subfigs = "latex_subfigs_combiner.combine_subfigures:main"
