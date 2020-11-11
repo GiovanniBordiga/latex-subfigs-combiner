@@ -3,6 +3,8 @@
 import argparse
 import os
 import re
+import subprocess
+import glob
 from PyPDF2 import PdfFileReader, PdfFileWriter
 
 
@@ -70,13 +72,15 @@ def main():
     with open(tmpFilename + ".tex", "w") as tmpTex:
         tmpTex.write(preambleString + beginDocument + "\n\\pagebreak\n".join(figureStrings) + endDocument)
     # compile auxiliary tex files
-    os.system("latexmk -pdf " + tmpFilename)
+    subprocess.run(["latexmk", "-pdf", tmpFilename])
 
     # create target directory
     try:
         os.mkdir(targetPath)
     except OSError:
-        os.system("rm -r " + targetPath + "/*")  # clean up target directory
+        # clean up target directory
+        for file in glob.glob(targetPath + "/*"):
+            os.remove(file)
 
     # extract figures from pages
     tmpPDF = PdfFileReader(open(tmpFilename + ".pdf", "rb"))
@@ -87,10 +91,11 @@ def main():
         with open(tmpFilename + "_page.pdf", "wb") as outputStream:
             output.write(outputStream)
         # crop figure and move it into target directory
-        os.system("pdfcrop " + tmpFilename + "_page.pdf " + targetPath + "/" + figNames[i])
+        subprocess.run(["pdfcrop", tmpFilename + "_page.pdf", targetPath + "/" + figNames[i]])
 
     # clean up auxiliary files
-    os.system("rm " + tmpFilename + "*")
+    for file in glob.glob(tmpFilename + "*"):
+        os.remove(file)
 
 
 # entrypoint
