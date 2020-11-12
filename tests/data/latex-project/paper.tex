@@ -1,0 +1,254 @@
+\documentclass[10pt,a4paper]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amssymb,amsmath,amsthm,amsfonts}    % math stuff
+\usepackage{bm}                                 % bold math
+\usepackage{mathtools}                          % tools to create operators and delimiters
+\usepackage{stmaryrd}                           % additional math symbols
+\usepackage{breqn}                              % automatic line breaking in equations (use wisely)
+\usepackage[textfont=footnotesize,labelfont={footnotesize,bf}]{caption}
+\usepackage{subcaption}
+\usepackage{booktabs}
+\usepackage[inline]{enumitem}
+\usepackage{graphicx}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[top=30mm,right=30mm,left=30mm,bottom=30mm]{geometry}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue]{hyperref}
+\usepackage[affil-it,auth-sc]{authblk}          % handle affiliations
+\usepackage[colorinlistoftodos,textwidth=25mm,textsize=footnotesize]{todonotes}
+\usepackage{lipsum}                             % generate dummy text
+\usepackage[
+    backend=biber,
+    style=numeric,
+    citestyle=numeric-comp,
+    maxbibnames=99,
+    minbibnames=99,
+    maxcitenames=2,
+    mincitenames=1,
+    giveninits=true,
+    sorting=none,
+    sortlocale=auto,
+    natbib=true,
+    url=false,
+    isbn=false,
+    doi=true,
+    eprint=true
+]{biblatex}
+\addbibresource{my_refs.bib}
+
+\captionsetup[subfigure]{singlelinecheck=off,justification=raggedright,labelfont=footnotesize}
+\captionsetup[figure]{name={Fig.},labelsep=period}
+\captionsetup[table]{name={Table},labelsep=period}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title{New awesome research findings}
+
+\author[1]{Name Surname}
+\author[2]{Name Surname}
+\author[1]{Name Surname\footnote{Corresponding author: e-mail: \href{mailto:name@institution.com}{name@institution.com}; phone: +XX\,XXXX\,XXXXXX.}}
+
+\renewcommand\Affilfont{\itshape\small}
+\affil[1]{Department of Amazing Science, University of Something, Somewhere, Somewhere}
+
+\date{\today} % change to \date{} to omit the date
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+    \noindent
+    \lipsum[1]
+\end{abstract}
+
+\paragraph{Keywords}
+Keyword 1 \textperiodcentered\
+Keyword 2 \textperiodcentered\
+Keyword 3 \textperiodcentered\
+Keyword 4
+
+
+\section{Introduction}
+\label{sec:introduction}
+% 
+\lipsum[1-3]
+
+
+\section{Amazing new discovery}
+\label{sec:new_discovery}
+% 
+\lipsum[4]
+
+\begin{figure}[htb]
+    \centering
+    \begin{subfigure}{0.24\textwidth}
+        \centering
+        \includegraphics[width=0.98\linewidth]{example-image-a}
+    \end{subfigure}
+    \begin{subfigure}{0.24\textwidth}
+        \centering
+        \includegraphics[width=0.98\linewidth]{example-image-b}
+    \end{subfigure}
+    \begin{subfigure}{0.24\textwidth}
+        \centering
+        \includegraphics[width=0.98\linewidth]{example-image-c}
+    \end{subfigure}
+    \begin{subfigure}{0.24\textwidth}
+        \centering
+        \includegraphics[width=0.98\linewidth]{example-image-a}
+    \end{subfigure}\\
+    \vspace{0.01\linewidth}
+    \begin{subfigure}{0.24\textwidth}
+        \centering
+        \includegraphics[width=0.98\linewidth]{example-image-b}
+    \end{subfigure}
+    \begin{subfigure}{0.24\textwidth}
+        \centering
+        \includegraphics[width=0.98\linewidth]{example-image-c}
+    \end{subfigure}
+    \begin{subfigure}{0.24\textwidth}
+        \centering
+        \includegraphics[width=0.98\linewidth]{example-image-a}
+    \end{subfigure}
+    \begin{subfigure}{0.24\textwidth}
+        \centering
+        \includegraphics[width=0.98\linewidth]{example-image-b}
+    \end{subfigure}
+    \caption{
+        Lorem ipsum dolor sit amet.
+    }
+\end{figure}
+
+
+\subsection{Amazing new discovery explained}
+\label{sec:new_discovery_explained}
+% 
+\lipsum[7]
+
+\begin{figure}[htb]
+    \centering
+    \begin{subfigure}{0.24\textwidth}
+        \centering
+        \includegraphics[width=0.98\linewidth]{example-image-a}
+    \end{subfigure}
+    \begin{subfigure}{0.24\textwidth}
+        \centering
+        \includegraphics[width=0.98\linewidth]{example-image-b}
+    \end{subfigure}
+    \begin{subfigure}{0.24\textwidth}
+        \centering
+        \includegraphics[width=0.98\linewidth]{example-image-c}
+    \end{subfigure}
+    \begin{subfigure}{0.24\textwidth}
+        \centering
+        \includegraphics[width=0.98\linewidth]{example-image-a}
+    \end{subfigure}
+    \caption{
+        Lorem ipsum dolor sit amet.
+    }
+\end{figure}
+
+
+\subsection{Amazing new discovery explained more}
+\label{sec:new_discovery_explained_more}
+% 
+
+\begin{figure}[htb]
+    \centering
+    \begin{subfigure}{0.3\textwidth}
+        \centering
+        \includegraphics[width=0.98\linewidth]{example-image-a}
+    \end{subfigure}
+    \begin{subfigure}{0.3\textwidth}
+        \centering
+        \includegraphics[width=0.98\linewidth]{example-image-b}
+    \end{subfigure}
+    \caption{
+        Lorem ipsum dolor sit amet.
+    }
+\end{figure}
+
+
+\section{Amazing methods}
+\label{sec:methods}
+% 
+
+\begin{figure}[htb]
+    \centering
+    \includegraphics[width=0.98\linewidth]{example-image-a}
+    \caption{
+        Lorem ipsum dolor sit amet.
+    }
+\end{figure}
+
+\begin{figure}[htb]
+    \centering
+    \includegraphics[width=0.98\linewidth]{example-image-b}
+    \caption{
+        Lorem ipsum dolor sit amet.
+    }
+\end{figure}
+
+
+\subsection{Amazing methods explained}
+\label{sec:methods_explained}
+% 
+\lipsum[3]
+
+
+\section{Amazing results}
+\label{sec:results}
+% 
+
+\begin{figure}[htb]
+    \centering
+    \begin{subfigure}{0.3\textwidth}
+        \centering
+        \includegraphics[width=0.98\linewidth]{example-image-a}
+    \end{subfigure}
+    \begin{subfigure}{0.3\textwidth}
+        \centering
+        \includegraphics[width=0.98\linewidth]{example-image-b}
+    \end{subfigure}\\
+    \begin{subfigure}{0.3\textwidth}
+        \centering
+        \includegraphics[width=0.98\linewidth]{example-image-c}
+    \end{subfigure}
+    \caption{
+        Lorem ipsum dolor sit amet.
+    }
+\end{figure}
+
+\begin{figure}[htb]
+    \centering
+    \begin{subfigure}{0.3\textwidth}
+        \centering
+        \includegraphics[width=0.98\linewidth]{example-image-a}
+    \end{subfigure}\\
+    \begin{subfigure}{0.3\textwidth}
+        \centering
+        \includegraphics[width=0.98\linewidth]{example-image-b}
+    \end{subfigure}
+    \begin{subfigure}{0.3\textwidth}
+        \centering
+        \includegraphics[width=0.98\linewidth]{example-image-c}
+    \end{subfigure}
+    \caption{
+        Lorem ipsum dolor sit amet.
+    }
+\end{figure}
+
+
+\section{Conclusions}
+\label{sec:conclusions}
+% 
+\lipsum[5]
+
+
+
+\end{document}
