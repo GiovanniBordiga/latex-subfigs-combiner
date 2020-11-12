@@ -16,6 +16,23 @@ This Python script provides an hands-free automated solution to this problem.
 
 The job is done by parsing the given TeX file, extracting the preamble, setting the page style to empty, extracting the `figure` environments that contain `subfigures`, compiling to a PDF via `latexmk`, and then crop each figure to a separate PDF file using `pdfcrop`.
 
+## Installation
+
+Easy peasy via `pip` or equivalent
+
+```bash
+pip install latex-subfigs-combiner
+```
+
 ## Usage
 
-<!-- TODO -->
+In a terminal, simply run `combine-subfigs` on your LaTeX main file
+
+```bash
+combine-subfigs /path/to/my/awesome/paper.tex
+```
+
+This will produce all the composite figures in a directory named `composite-figures` at the location you called script from.
+By default, the figures will be named as `fig_1.pdf`, `fig_2.pdf`, etc.
+
+If you want to change the output directory or the filename prefix `fig_` of the figures, you can use the script parameters `--target_dir` and `--prefix`, respectively.
