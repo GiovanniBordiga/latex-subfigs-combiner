@@ -7,7 +7,7 @@ readme      = "README.md"
 license     = "MIT"
 homepage    = "https://github.com/GiovanniBordiga/latex-subfigs-combiner"
 repository  = "https://github.com/GiovanniBordiga/latex-subfigs-combiner"
-keywords    = ["latex", "latex-figure", "python-script"]
+keywords    = ["latex", "latex-figure", "latex-subfigure", "python-script"]
 
 [tool.poetry.scripts]
 combine-subfigs = "latex_subfigs_combiner.combine_subfigures:main"
@@ -17,7 +17,7 @@ python = "^3.6"
 PyPDF2 = "^1.26.0"
 
 [tool.poetry.dev-dependencies]
-pytest = "^5.2"
+pytest   = "^5.2"
 autopep8 = "^1.5.4"
 
 [build-system]
