@@ -1,6 +1,7 @@
 from latex_subfigs_combiner import __version__
 import subprocess
 import glob
+import shutil
 
 
 def test_version():
@@ -17,3 +18,6 @@ def test_script():
     # check number of figures produced
     numOutputFigs = len(glob.glob("./tests/data/combined-figures/*.pdf"))
     assert numOutputFigs == 5
+
+    # clean up test output figures
+    shutil.rmtree("./tests/data/combined-figures")
