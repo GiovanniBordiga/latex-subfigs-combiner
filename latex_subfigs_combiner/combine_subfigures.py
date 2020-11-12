@@ -31,7 +31,7 @@ prefix = args.prefix            # prefix for figure figNames
 
 def extractCompositeFigureStrings(latexString):
     """
-    Returns a list of latex figures as strings stripping out captions
+    Returns a list of latex figures as strings stripping out captions.
     """
     # extract figures
     figureStrings = re.findall(r"\\begin{figure}.*?\\end{figure}", latexString, re.S)
