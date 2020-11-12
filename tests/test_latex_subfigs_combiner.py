@@ -11,12 +11,13 @@ def test_version():
 def test_script():
 
     # execute script with test parameters
-    job = subprocess.run(["combine-subfigs", "./tests/data/paper.tex", "--target_dir", "./tests/data/combined-figures"])
+    job = subprocess.run(["combine-subfigs", "./tests/data/paper.tex",
+                          "--target_dir", "./tests/data/composite-figures"])
     assert job.returncode == 0
 
     # check number of figures produced
-    numOutputFigs = len(glob.glob("./tests/data/combined-figures/*.pdf"))
+    numOutputFigs = len(glob.glob("./tests/data/composite-figures/*.pdf"))
     assert numOutputFigs == 5
 
     # clean up test output figures
-    shutil.rmtree("./tests/data/combined-figures")
+    shutil.rmtree("./tests/data/composite-figures")

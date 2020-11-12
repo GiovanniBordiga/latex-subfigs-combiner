@@ -19,7 +19,7 @@ parser = argparse.ArgumentParser(
 parser.add_argument("tex_source",
                     help="Source TeX file containing composite figures to be combined.", type=str)
 parser.add_argument("--target_dir", "-d",
-                    help="Target directory for output figures. Default is \"./combined-figures\".", type=str, default="./combined-figures")
+                    help="Target directory for output figures. Default is \"./composite-figures\".", type=str, default="./composite-figures")
 parser.add_argument("--prefix", "-p",
                     help="Prefix for naming output figures. Default is \"fig_\".", type=str, default="fig_")
 
@@ -84,9 +84,9 @@ def compileLatex(preambleString, figureStrings, tmpFilename):
     subprocess.run(["latexmk", "-pdf", tmpFilename])
 
 
-def createCombinedFigures(figNames, tmpFilename):
+def createCompositeFigures(figNames, tmpFilename):
     """
-    Creates the combined figures in targetPath and clean up auxiliary files.
+    Creates the composite figures in targetPath and clean up auxiliary files.
     """
 
     # create target directory
@@ -125,9 +125,9 @@ def main():
     tmpFilename = "comb_fig_tmp"  # name of auxiliary files
     compileLatex(preambleString, figureStrings, tmpFilename)
 
-    # create combined figures
+    # create composite figures
     figNames = [prefix + str(i + 1) + ".pdf" for i in range(len(figureStrings))]  # figure filenames for output
-    createCombinedFigures(figNames, tmpFilename)
+    createCompositeFigures(figNames, tmpFilename)
 
 
 # entrypoint for cli invocation
