@@ -125,12 +125,11 @@ def main():
     tmpFilename = "comb_fig_tmp"  # name of auxiliary files
     compileLatex(preambleString, figureStrings, tmpFilename)
 
+    # create combined figures
     figNames = [prefix + str(i + 1) + ".pdf" for i in range(len(figureStrings))]  # figure filenames for output
-
-    # create target directory
     createCombinedFigures(figNames, tmpFilename)
 
 
-# entrypoint
+# entrypoint for cli invocation
 if __name__ == "__main__":
     main()
