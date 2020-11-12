@@ -11,8 +11,7 @@ def test_version():
 def test_script():
 
     # execute script with test parameters
-    job = subprocess.run(["combine-subfigs", "./tests/data/latex-project/paper.tex", "--target_dir",
-                          "./tests/data/combined-figures"])
+    job = subprocess.run(["combine-subfigs", "./tests/data/paper.tex", "--target_dir", "./tests/data/combined-figures"])
     assert job.returncode == 0
 
     # check number of figures produced
