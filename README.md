@@ -8,7 +8,7 @@ This package provides a simple Python script for combining LaTeX figures compose
 
 ## Why
 
-If you have ever tried to publish on scientific journals, you have probably encountered at least *one* journal that either does not accept LaTeX `subfigures` or will combine your composite figures during production with a very high chance of making a mess (both scenarios are completely unreasonable to me, but yet sometimes they happen).
+If you have ever tried to publish on scientific journals, you have probably encountered at least *one* journal that either does not accept LaTeX `subfigures` or will combine your composite figures during production with a very high chance of making a mess (both scenarios are completely unreasonable to me, but yet they happen sometimes).
 Of course, you really like those shiny composite LaTeX figures and do not want to waste time painstakingly stitching them together by hand (e.g. using InkScape).
 This Python script provides an hands-free automated solution to this problem.
 
