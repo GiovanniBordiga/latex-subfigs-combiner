@@ -19,6 +19,7 @@ PyPDF2 = "^1.26.0"
 [tool.poetry.dev-dependencies]
 pytest   = "^5.2"
 autopep8 = "^1.5.4"
+rope = "^0.18.0"
 
 [build-system]
 requires      = ["poetry-core>=1.0.0"]
