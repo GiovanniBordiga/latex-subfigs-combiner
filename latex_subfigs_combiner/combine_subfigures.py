@@ -46,9 +46,9 @@ def extractCompositeFigureStrings(latexString):
     return figureStrings
 
 
-def main():
+def parseTexFile():
     """
-    Executes main program
+    Parses the TeX file, returning the list of composite figures and the preamble.
     """
 
     # read in tex file
@@ -64,18 +64,30 @@ def main():
     # extract the figure containing subfigures
     figureStrings = extractCompositeFigureStrings(latexStringCleaned)
 
+    return preambleString, figureStrings
+
+
+def compileLatex(preambleString, figureStrings, tmpFilename):
+    """
+    Compiles the auxiliary TeX file with one figure per page.
+    """
+
     beginDocument = "\\begin{document}\n"
     endDocument = "\\end{document}\n"
-
-    tmpFilename = "comb_fig_tmp"  # name of auxiliary files
-    figNames = [prefix + str(i + 1) + ".pdf" for i in range(len(figureStrings))]  # figure filenames for output
 
     # compile auxiliary tex file with one figure per page
     # TODO: would be nice to compile only those figures that have changes since last compilation (can be done by storing the list figureStrings)
     with open(tmpFilename + ".tex", "w") as tmpTex:
         tmpTex.write(preambleString + beginDocument + "\n\\pagebreak\n".join(figureStrings) + endDocument)
+
     # compile auxiliary tex files
     subprocess.run(["latexmk", "-pdf", tmpFilename])
+
+
+def createCombinedFigures(figNames, tmpFilename):
+    """
+    Creates the combined figures in targetPath and clean up auxiliary files.
+    """
 
     # create target directory
     try:
@@ -99,6 +111,24 @@ def main():
     # clean up auxiliary files
     for file in glob.glob(tmpFilename + "*"):
         os.remove(file)
+
+
+def main():
+    """
+    Executes main program.
+    """
+
+    # parse tex file extracting composite figures and preable
+    preambleString, figureStrings = parseTexFile()
+
+    # compile auxiliary tex file with one figure per page
+    tmpFilename = "comb_fig_tmp"  # name of auxiliary files
+    compileLatex(preambleString, figureStrings, tmpFilename)
+
+    figNames = [prefix + str(i + 1) + ".pdf" for i in range(len(figureStrings))]  # figure filenames for output
+
+    # create target directory
+    createCombinedFigures(figNames, tmpFilename)
 
 
 # entrypoint
