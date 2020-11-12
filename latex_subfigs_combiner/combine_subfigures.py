@@ -26,7 +26,7 @@ parser.add_argument("--prefix", "-p",
 args = parser.parse_args()
 texFile = args.tex_source       # input tex file
 targetPath = args.target_dir    # target directory where final figures will be collected
-prefix = args.prefix            # prefix for figure figNames
+prefix = args.prefix            # prefix for figure filenames
 
 
 def extractCompositeFigureStrings(latexString):
