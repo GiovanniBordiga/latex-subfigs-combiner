@@ -34,7 +34,9 @@ def extractCompositeFigureStrings(latexString):
     Returns a list of latex figures as strings stripping out captions
     """
     # extract figures
-    figureStrings = re.findall(r"\\begin{figure}.*?\\begin{subfigure}.*?\\end{figure}", latexString, re.S)
+    figureStrings = re.findall(r"\\begin{figure}.*?\\end{figure}", latexString, re.S)
+    # filter composite figures only i.e. containing subfigures
+    figureStrings = [figureString for figureString in figureStrings if "\\begin{subfigure}" in figureString]
     # remove captions (preserving captions in subfigures)
     figureStrings = [
         re.findall(r"\\begin{figure}.*(?=\n.*\\caption)", figureString, re.S)[0] + "\n\\end{figure}"
