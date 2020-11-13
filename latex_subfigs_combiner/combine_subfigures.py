@@ -36,12 +36,10 @@ def extractCompositeFigureStrings(latexString):
 
     # extract figures
     figureStrings = re.findall(r"\\begin{figure}.*?\\end{figure}", latexString, re.S)
-    # filter composite figures only i.e. containing subfigures
-    figureStrings = [figureString for figureString in figureStrings if "\\begin{subfigure}" in figureString]
-    # remove captions (preserving captions in subfigures)
+    # filter composite figures only and remove captions (preserving captions in subfigures)
     figureStrings = [
         re.findall(r"\\begin{figure}.*(?=\n.*\\caption)", figureString, re.S)[0] + "\n\\end{figure}"
-        for figureString in figureStrings
+        for figureString in figureStrings if "\\begin{subfigure}" in figureString
     ]
     return figureStrings
 
