@@ -36,3 +36,7 @@ This will produce all the composite figures in a directory named `composite-figu
 By default, the figures will be named as `fig_1.pdf`, `fig_2.pdf`, etc.
 If you want to change the output directory or the filename prefix `fig_` of the figures, you can use the optional arguments `--target_dir` and `--prefix`, respectively.
 Execute `combine-subfigs -h` for more details.
+
+## Tips are welcomed!
+
+<!-- TODO -->
