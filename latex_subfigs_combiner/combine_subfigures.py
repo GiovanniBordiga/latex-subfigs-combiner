@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 
 import argparse
+import glob
 import os
 import re
 import subprocess
-import glob
+
 from PyPDF2 import PdfFileReader, PdfFileWriter
 
 

@@ -1,7 +1,8 @@
-from latex_subfigs_combiner import __version__
-import subprocess
 import glob
 import shutil
+import subprocess
+
+from latex_subfigs_combiner import __version__
 
 
 def test_version():
