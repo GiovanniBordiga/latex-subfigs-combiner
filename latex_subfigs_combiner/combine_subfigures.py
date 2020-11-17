@@ -26,7 +26,7 @@ parser.add_argument("--target_dir", "-d",
 parser.add_argument("--prefix", "-p",
                     help="Prefix for naming output figures. Default is \"fig_\".", type=str, default="fig_")
 parser.add_argument("--version", "-v", action="version",
-                    version="%(prog)s v{version}".format(version=__version__), help="Current version.")
+                    version="%(prog)s v{version}".format(version=__version__), help="Shows current version.")
 
 args = parser.parse_args()
 texFile = args.tex_source       # input tex file
