@@ -8,6 +8,8 @@ import subprocess
 
 from PyPDF2 import PdfFileReader, PdfFileWriter
 
+from . import __version__
+
 
 # arguments handling and parsing
 parser = argparse.ArgumentParser(
@@ -23,6 +25,8 @@ parser.add_argument("--target_dir", "-d",
                     help="Target directory for output figures. Default is \"./composite-figures\".", type=str, default="./composite-figures")
 parser.add_argument("--prefix", "-p",
                     help="Prefix for naming output figures. Default is \"fig_\".", type=str, default="fig_")
+parser.add_argument("--version", "-v", action="version",
+                    version="%(prog)s v{version}".format(version=__version__), help="Current version.")
 
 args = parser.parse_args()
 texFile = args.tex_source       # input tex file
