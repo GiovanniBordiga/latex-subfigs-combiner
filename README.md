@@ -8,7 +8,7 @@ This package provides a simple Python script for combining LaTeX figures compose
 
 ## Why
 
-If you have ever tried to publish on scientific journals, you have probably encountered at least *one* journal that either does not accept LaTeX [`subfigures`](https://www.ctan.org/pkg/subcaption) or will combine your composite figures during production with a very high chance of making a mess (both scenarios are completely unreasonable to me, but yet they happen sometimes).
+If you have ever tried to publish on scientific journals, you have probably encountered at least *one* journal that either does not accept LaTeX [`subfigures`](https://www.ctan.org/pkg/subcaption) or will combine your composite figures during production with a very high chance of making a mess (both scenarios are completely unreasonable, but yet they happen sometimes).
 Of course, you really like those shiny composite LaTeX figures and do not want to waste time painstakingly stitching them together by hand (e.g. using Inkscape).
 This Python script provides an hands-free automated solution to this problem.
 
@@ -33,7 +33,8 @@ combine-subfigs /path/to/my/awesome/paper.tex
 ```
 
 This will produce all the composite figures in a directory named `composite-figures` at the location you called the script from.
-By default, the figures will be named as `fig_1.pdf`, `fig_2.pdf`, etc.
+
+By default, the output figures will be named as `fig_1.pdf`, `fig_2.pdf`, etc.
 If you want to change the output directory or the filename prefix `fig_` of the figures, you can use the optional arguments `--target_dir` and `--prefix`, respectively.
 Execute `combine-subfigs -h` for more details.
 
