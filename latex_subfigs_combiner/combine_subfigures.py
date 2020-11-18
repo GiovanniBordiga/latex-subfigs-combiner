@@ -84,7 +84,7 @@ def compileLatex(preambleString, figureStrings, tmpFilename):
         tmpTex.write(preambleString + beginDocument + "\n\\pagebreak\n".join(figureStrings) + endDocument)
 
     # compile auxiliary tex files
-    subprocess.run(["latexmk", "-pdf", tmpFilename, "-silent"])
+    subprocess.run(["latexmk", "-pdf", "-silent", tmpFilename])
 
 
 def createCompositeFigures(figNames, tmpFilename):
