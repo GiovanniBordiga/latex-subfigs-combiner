@@ -40,4 +40,4 @@ Execute `combine-subfigs -h` for more details.
 
 ## Tips are welcomed!
 
-If you found this useful, feel free to offer me a beer :beer: via [PayPal](https://paypal.me/GiovanniBordiga/3) or [send me a few sats](http://deadcat.epizy.com/) :zap:.
+If you found this useful, feel free to offer me a beer :beer: via [PayPal](https://paypal.me/GiovanniBordiga/3 "Send tip via PayPal") or [send me a few sats](http://deadcat.epizy.com/ "Send tip via LN") :zap:.
