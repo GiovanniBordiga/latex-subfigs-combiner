@@ -117,8 +117,8 @@ def createCompositeFigures(targetPath, figNames, compilationPath, tmpFilename):
 
     # clean up auxiliary files
     for file in glob.glob(tmpFilename + "*"):
-        os.remove(file)
-    os.remove(compilationPath / (tmpFilename + ".tex"))
+        os.remove(file)  # clean up current directory
+    os.remove(compilationPath / (tmpFilename + ".tex"))  # remove auxiliary tex file
 
 
 def main():
