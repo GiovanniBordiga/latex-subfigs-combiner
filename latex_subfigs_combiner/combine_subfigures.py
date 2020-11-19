@@ -89,7 +89,7 @@ def compileLatex(preambleString, figureStrings, compilationPath, tmpFilename):
     subprocess.run(["latexmk", "-pdf", "-silent", "-cd", str(tmpTexPath)])
 
 
-def createCompositeFigures(targetPath, figNames, compilationPath, tmpFilename):
+def createCompositeFigures(targetPath, figNames, tmpFilename):
     """
     Creates the composite figures in targetPath and clean up auxiliary files.
     """
@@ -115,7 +115,12 @@ def createCompositeFigures(targetPath, figNames, compilationPath, tmpFilename):
         # crop figure and move it into target directory
         subprocess.run(["pdfcrop", str(pagePath), str(targetPath / figNames[i])])
 
-    # clean up auxiliary files
+
+def cleanUp(compilationPath, tmpFilename):
+    """
+    Delete auxiliary files in both current path and compilationPath.
+    """
+
     for file in glob.glob(tmpFilename + "*"):
         os.remove(file)  # clean up current directory
     os.remove(compilationPath / (tmpFilename + ".tex"))  # remove auxiliary tex file
@@ -131,11 +136,14 @@ def main():
 
     # compile auxiliary tex file with one figure per page
     tmpFilename = "comb_fig_tmp"  # name of auxiliary files
-    compileLatex(preambleString, figureStrings, texFilePath.parent, tmpFilename)
+    compileLatex(preambleString, figureStrings, compilationPath=texFilePath.parent, tmpFilename=tmpFilename)
 
     # create composite figures
     figNames = [prefix + str(i + 1) + ".pdf" for i in range(len(figureStrings))]  # figure filenames for output
-    createCompositeFigures(targetPath, figNames, texFilePath.parent, tmpFilename)
+    createCompositeFigures(targetPath, figNames, tmpFilename)
+
+    # clean up auxiliary files
+    cleanUp(compilationPath=texFilePath.parent, tmpFilename=tmpFilename)
 
 
 # entrypoint for cli invocation
