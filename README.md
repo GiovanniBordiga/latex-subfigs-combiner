@@ -2,7 +2,7 @@
 
 ![Made with Python](https://img.shields.io/badge/Made%20with-Python-blue?logo=python&logoColor=ecf0f1)
 ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/latex-subfigs-combiner)
-![PyPI](https://img.shields.io/pypi/v/latex-subfigs-combiner)
+[![PyPI](https://img.shields.io/pypi/v/latex-subfigs-combiner)](https://pypi.org/project/latex-subfigs-combiner "Go to PyPI")
 ![PyPI - Wheel](https://img.shields.io/pypi/wheel/latex-subfigs-combiner)
 [![GitHub license](https://img.shields.io/github/license/GiovanniBordiga/latex-subfigs-combiner)](https://github.com/GiovanniBordiga/latex-subfigs-combiner/blob/master/LICENSE)
 [![Tip me](https://img.shields.io/badge/Tip%20me-a%20beer-16a085)](http://deadcat.epizy.com/ "Send tip via LN")
