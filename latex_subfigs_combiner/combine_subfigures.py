@@ -118,7 +118,7 @@ def createCompositeFigures(targetPath, figNames, tmpFilename):
 
 def cleanUp(compilationPath, tmpFilename):
     """
-    Delete auxiliary files in both current path and compilationPath.
+    Deletes auxiliary files in both current path and compilationPath.
     """
 
     for file in glob.glob(tmpFilename + "*"):
@@ -140,7 +140,7 @@ def main():
 
     # create composite figures
     figNames = [prefix + str(i + 1) + ".pdf" for i in range(len(figureStrings))]  # figure filenames for output
-    createCompositeFigures(targetPath, figNames, tmpFilename)
+    createCompositeFigures(targetPath, figNames, tmpFilename=tmpFilename)
 
     # clean up auxiliary files
     cleanUp(compilationPath=texFilePath.parent, tmpFilename=tmpFilename)
