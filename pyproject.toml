@@ -1,6 +1,6 @@
 [tool.poetry]
 name        = "latex-subfigs-combiner"
-version     = "0.1.0"
+version     = "1.0.0"
 description = "Python script for combining LaTeX figures composed of subfigures."
 authors     = ["Giovanni Bordiga <gio.61192@gmail.com>"]
 readme      = "README.md"
