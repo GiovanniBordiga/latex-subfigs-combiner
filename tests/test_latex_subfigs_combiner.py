@@ -1,12 +1,15 @@
 import glob
 import shutil
 import subprocess
+from pathlib import Path
 
+import toml
 from latex_subfigs_combiner import __version__
 
 
 def test_version():
-    assert __version__ == '0.1.0'
+    tomlVersion = toml.load(Path("./pyproject.toml")).get("tool").get("poetry").get("version")
+    assert __version__ == tomlVersion
 
 
 def test_script():
