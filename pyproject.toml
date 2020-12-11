@@ -2,7 +2,7 @@
 name        = "latex-subfigs-combiner"
 version     = "1.0.0"
 description = "Python script for combining LaTeX figures composed of subfigures."
-authors     = ["Giovanni Bordiga <gio.61192@gmail.com>"]
+authors     = ["Giovanni Bordiga <giovanni.bordiga@unitn.it>"]
 readme      = "README.md"
 license     = "MIT"
 homepage    = "https://github.com/GiovanniBordiga/latex-subfigs-combiner"
