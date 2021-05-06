@@ -1,11 +1,12 @@
 # LaTeX Subfigs Combiner
 
-![Made with Python](https://img.shields.io/badge/Made%20with-Python-blue?logo=python&logoColor=ecf0f1)
-![PyPI - Python Version](https://img.shields.io/pypi/pyversions/latex-subfigs-combiner)
-[![PyPI](https://img.shields.io/pypi/v/latex-subfigs-combiner)](https://pypi.org/project/latex-subfigs-combiner "Go to PyPI")
-![PyPI - Wheel](https://img.shields.io/pypi/wheel/latex-subfigs-combiner)
-[![GitHub license](https://img.shields.io/github/license/GiovanniBordiga/latex-subfigs-combiner)](https://github.com/GiovanniBordiga/latex-subfigs-combiner/blob/master/LICENSE)
-[![Tip me](https://img.shields.io/badge/Tip%20me-a%20beer-16a085)](http://deadcat.epizy.com/ "Send tip via LN")
+![Made with Python](https://img.shields.io/badge/Made%20with-Python-blue?logo=python&logoColor=ecf0f1&labelColor=34495e)
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/latex-subfigs-combiner?labelColor=34495e)
+[![PyPI](https://img.shields.io/pypi/v/latex-subfigs-combiner?labelColor=34495e)](https://pypi.org/project/latex-subfigs-combiner "Go to PyPI")
+![PyPI - Wheel](https://img.shields.io/pypi/wheel/latex-subfigs-combiner?labelColor=34495e)
+[![GitHub license](https://img.shields.io/github/license/GiovanniBordiga/latex-subfigs-combiner?labelColor=34495e)](https://github.com/GiovanniBordiga/latex-subfigs-combiner/blob/master/LICENSE)
+[![Tip me](https://img.shields.io/badge/Tip%20me-a%20beer-16a085?labelColor=34495e)](http://deadcat.epizy.com/ "Send tip via LN")
+[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FGiovanniBordiga%2Flatex-subfigs-combiner&count_bg=%2327AE60&title_bg=%2334495E&icon=github.svg&icon_color=%23E7E7E7&title=Hits&edge_flat=false)](https://hits.seeyoufarm.com)
 
 Python script for combining LaTeX figures composed of subfigures
 
