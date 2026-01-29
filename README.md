@@ -7,7 +7,7 @@
 [![Pepy Total Downloads](https://img.shields.io/pepy/dt/latex-subfigs-combiner?labelColor=34495e)](https://pepy.tech/projects/latex-subfigs-combiner)
 [![GitHub license](https://img.shields.io/github/license/GiovanniBordiga/latex-subfigs-combiner?labelColor=34495e)](https://github.com/GiovanniBordiga/latex-subfigs-combiner/blob/master/LICENSE)
 [![Tip me](https://img.shields.io/badge/Tip%20me-a%20beer-16a085?labelColor=34495e)](http://deadcat.epizy.com/ "Send tip via LN")
-[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FGiovanniBordiga%2Flatex-subfigs-combiner&count_bg=%2327AE60&title_bg=%2334495E&icon=github.svg&icon_color=%23E7E7E7&title=Hits&edge_flat=false)](https://hits.seeyoufarm.com)
+![Badge](https://hitscounter.dev/api/hit?url=https%3A%2F%2Fgithub.com%2FGiovanniBordiga%2Flatex-subfigs-combiner&label=Visits&icon=heart-fill&color=%232ecc71&message=&style=flat&tz=UTC)
 
 Python script for combining LaTeX figures composed of subfigures
 
